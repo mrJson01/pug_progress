@@ -354,3 +354,73 @@ p.
 
 ```
 
+
+## Iteration
+
+Pug supports two primary methods of iteration: **each** and **while** .
+
+## each
+
+```pug
+ul
+  each val in [1, 2, 3, 4, 5]
+    li= val
+
+```
+You can also get the index as you iterate:
+
+```pug
+ul
+  each val, index in ['zero', 'one', 'two']
+    li= index + ': ' + val
+
+```
+Pug also lets you iterate over the keys in an object:
+
+```pug
+ul
+  each val, key in {1: 'one', 2: 'two', 3: 'three'}
+    li= key + ': ' + val
+
+```
+
+The object or array to iterate over is just plain JavaScript. So, it can <br/>
+be a variable, or the result of a function call, or almost anything else.
+
+```pug
+
+- var values = [];
+ul
+  each val in values.length ? values : ['There are no values']
+    li= val
+
+```
+or
+
+```pug
+- var values = [];
+ul
+  each val in values
+    li= val
+  else
+    li There are no values
+
+```
+
+## while
+
+You can use while to create a loop:
+
+
+```pug
+- var i =0;
+ul
+    while n < 4
+        li !{n++}
+
+```
+
+
+
+
+

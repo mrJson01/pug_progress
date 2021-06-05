@@ -26,4 +26,8 @@ Router.get('/interpolation',(req,res)=>{
     res.render('interpolation');
 });
 
+Router.get('/iteration',(req,res)=>{
+    res.render('iteration');
+});
+
 module.exports = Router;
