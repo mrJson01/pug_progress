@@ -207,4 +207,46 @@ case friends
 
 ```
 
+## Code 
+
+Pug allows you to write inline JavaScript code in your templates. There are three <br/>
+types of code: Unbuffered, Buffered, and Unescaped Buffered.
+
+
+## Unbuffered Code
+
+Unbuffered code starts with -. It does not directly add anything to the output.
+
+```pug
+- for (var x = 0; x < 3; x++)
+    li item
+
+```
+
+## Buffered Code
+
+Buffered code starts with =. It evaluates the JavaScript expression and outputs the result. For security, buffered code is first HTML escaped.
+
+```pug
+
+p
+    ='This code is <escaped>!'
+
+```
+
+## Unescaped Buffered Code
+
+Unescaped buffered code starts with **!=** . It evaluates the JavaScript expression and outputs the result.
+
+
+```pug
+
+p!= 'This code is' + ' <strong>not</strong> escaped!'
+
+```
+
+
+
+
+
 

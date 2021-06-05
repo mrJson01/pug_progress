@@ -1,0 +1,24 @@
+html
+    head(lang="pl")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width;initial-scale=1;shrink-to-fit=no")
+        title="Pug Code"
+    body
+    
+        ul
+            - for ( var x = 0; x < 3; x++)
+                li item
+            
+            - var array = ['slow','fast','middle']
+            each val of array
+                li= val 
+        
+        p
+            ='This code is <escaped>!'
+            
+        p(style={
+            background:'blue',
+            color:'white'
+        })='A message with '+'blue '+"background"
+        
+        p!='<span style="color:red;">Warrning</span> an error ocursed'
