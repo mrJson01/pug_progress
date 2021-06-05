@@ -30,4 +30,8 @@ Router.get('/iteration',(req,res)=>{
     res.render('iteration');
 });
 
+Router.get('/mixins',(req,res)=>{
+    res.render('mixins');
+});
+
 module.exports = Router;

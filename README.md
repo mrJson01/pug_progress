@@ -409,7 +409,7 @@ ul
 
 ## while
 
-You can use while to create a loop:
+You can use **while** to create a loop:
 
 
 ```pug
@@ -419,6 +419,100 @@ ul
         li !{n++}
 
 ```
+
+## Mixins
+
+Mixins allow you to create reusable block of Pug:
+
+```pug
+
+//- Declaration
+mixin list
+  ul
+    li foo
+    li bar
+    li baz
+//- Use
++list
++list
+
+```
+
+Mixins are compiled to functions, and can take arguments:
+
+```pug
+mixin pet(name)
+  li.pet= name
+ul
+  +pet('cat')
+  +pet('dog')
+  +pet('pig')
+
+```
+
+## Mixin Attributes
+
+Mixins also get an implicit **attributes** argument, which is taken from the attributes passed to the mixin:
+
+```pug
+
+mixin link(href,text)
+    a(class!=attributes.class href=href)= text
+            
++link('https://www.google.com','Google')(class="link-to")
+
+```
+The values in attributes by default are already escaped! You should use != to avoid escaping them a second time. <br/>
+
+Other way to use attributes :
+
+```pug
+mixin link(href, name)
+  a(href=href)&attributes(attributes)= name
+
++link('/foo', 'foo')(class="btn")
+
+```
+The syntax **+link(class="btn")** is also valid and equivalent to **+link()(class="btn")** , <br/>
+since Pug tries to detect if parentheses’ contents are attributes or arguments. <br/>
+Nevertheless, we encourage you to use the second syntax, as you pass explicitly <br/>
+no arguments and you ensure the first parenthesis is the arguments list.
+
+## Default Argument's Values
+
+```pug
+//- Declaration
+mixin article(title='Default Title')
+  .article
+    .article-wrapper
+      h1= title
+
+//- Use
++article()
+
++article('Hello world')
+
+```
+
+## Rest Arguments
+
+You can write mixins to take an unknow number of arguments:
+
+```pug
+
+mixin list(id,...rest)
+    ul(id=id)
+        each val in rest
+            li=val
+
++list("my-list",1,2,3,4,5,"value of six")
+
+```
+
+
+
+
+
 
 
 
