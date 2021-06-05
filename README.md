@@ -509,12 +509,73 @@ mixin list(id,...rest)
 
 ```
 
+## Plain Text
+
+Pug provides four ways of getting plain text — that is, any code or text content that <br/>
+should go, mostly unprocessed, directly into the rendered HTML. They are useful in different situations.
 
 
+## Inline in a Tag 
+
+he easiest way to add plain text is inline. The first term on the line is the tag itself.
+
+```pug
+p This is plain old <em>text</em> content.
+```
+
+## Literal HTML
+
+Whole lines are also treated as plain text when they begin with a left angle bracket (**<**), <br/>
+which may occasionally be useful for writing literal HTML tags in places that could otherwise be inconvenient. 
 
 
+```pug
 
+<html>
 
+body
+  p Indenting the body tag here would make no difference.
+  p HTML itself isn't whitespace-sensitive.
 
+</html>
+
+```
+
+## Piped text
+
+Another way to add plain text to templates is to prefix a line with a pipe character (**|**).
+
+```pug
+
+p
+  | The pipe always goes at the beginning of its own line,
+  | not counting indentation.
+
+```
+## Block in a Tag
+
+Often you might want large blocks of text within a tag. A good example is writing JavaScript <br/>
+and CSS code in the script and style tags. To do this, just add a **.** after the tag name.
+
+## Block Expansion
+
+```pug
+a: img
+```
+## Self-Closing Tags
+
+Tags such as img, meta, and link are automatically self-closing.You can also explicitly <br/>
+self close a tag by appending the **/** character. 
+
+```pug
+
+foo/
+foo(class='baz')/
+
+```
+## Rendered Whitespace
+
+Whitespace is removed from the beginning and end of tags, so that you have control over <br/>
+whether the rendered HTML elements touch or not. 
 
 

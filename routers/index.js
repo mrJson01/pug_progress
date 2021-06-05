@@ -34,4 +34,8 @@ Router.get('/mixins',(req,res)=>{
     res.render('mixins');
 });
 
+Router.get('/plain',(req,res)=>{
+    res.render('plain-text');
+});
+
 module.exports = Router;
