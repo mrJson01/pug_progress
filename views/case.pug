@@ -1,0 +1,23 @@
+html 
+    head(lang="pl")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width;initial-scale=1;shrink-to-fit=no")
+        title="Pug Case"
+    body
+    
+        - var newarray = [1,2,3,4,5]
+        case newarray.length
+            when 0
+            when 1 
+                p you have one friend
+            default
+                p you have #{newarray.length} friends
+                
+        - var friends = 1
+        case friends
+            when 0
+                -break
+            when 1
+                p you have one friend
+            default
+                p you have #{friends} friends
