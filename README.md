@@ -300,12 +300,57 @@ html
 
 ```
 
+## String Interpolation, Escaped
 
+**title** follows the basic pattern for evaluating a template local, but the code in between **#{** and **}** is evaluated, escaped, and the result buffered into the output of the template being rendered.
 
+```pug
+- var msg = "not my inside voice";
+p This is #{msg.toUpperCase()}
 
+```
 
+## String Interpolation, Unescaped
 
+```pug
 
+- var quote = '<em>lorem ipsum</em>';
+p Joel: !{quote}
 
+```
 
+## Tag Interpolation
+
+Interpolation works not only on JavaScript values, but on Pug as well. Just use the tag interpolation syntax, like so:
+
+```pug 
+p.
+  This is a very long and boring paragraph that spans multiple lines.
+  Suddenly there is a #[strong strongly worded phrase] that cannot be
+  #[em ignored].
+p.
+  And here's an example of an interpolated tag with an attribute:
+  #[q(lang="es") ¡Hola Mundo!]
+
+```
+
+## Whitespace Control
+
+The tag interpolation syntax is especially useful for inline tags, where <br/>
+whitespace before and after the tag is significant.
+
+By default, however, Pug removes all spaces before and after tags. <br/>
+Check out the following example:
+
+```pug
+p
+  | If I don't write the paragraph with tag interpolation, tags like
+  strong strong
+  | and
+  em em
+  | might produce unexpected results.
+p.
+  If I do, whitespace is #[strong respected] and #[em everybody] is happy.
+
+```
 

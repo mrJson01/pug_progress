@@ -22,5 +22,8 @@ Router.get('/includes',(req,res)=>{
     res.render('includes');
 });
 
+Router.get('/interpolation',(req,res)=>{
+    res.render('interpolation');
+});
 
 module.exports = Router;
