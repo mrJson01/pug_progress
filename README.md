@@ -1,8 +1,8 @@
 # Pug Docs
 
-* https://github.com/mrJson01/pug_progress#attributes - attributes
-* https://github.com/mrJson01/pug_progress#multiline-attributes - multiline attributes
-* #quoted-attributes - quoted attributes
+* [attributes](https://github.com/mrJson01/pug_progress#attributes)
+
+* [quoted attributes](#quoted-attributes)
 
 ## Attributes
 
