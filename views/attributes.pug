@@ -1,0 +1,80 @@
+html
+    head(lang="pl")
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width;initial-scale=1;shrink-to-fit=no")
+        title="Pug Docs"
+    body
+        h1="PUG Docs"
+        
+        a(class='button' href='//google.com') Google
+        
+        - var authenticated = false
+        button(class= authenticated ? 'auth' : 'no') Valid
+        
+        input(
+            type='checkbox'
+            name="agreement"
+            checked
+            data-json=`{
+                "very-long":"lorem ipsum",
+                "number":8
+            }`
+        )
+        
+        br
+        
+        div(class='div-class', (click)='play()')
+        div(class='div-class' '(click)'='play()')
+        
+        - var url = "pug-test.html";
+        a(href='/'+url) Link
+        
+        
+        - var number = 80
+        - var color = 'red';
+        span(style=`color:${color};`)= number
+        
+        br
+        
+        div
+            div(style={color:"blue",background:'green'}) Greendit
+            
+        br
+        br
+        br
+        
+        input( type="checkbox" checked)
+        input( type="checkbox" checked=true)
+        input( type="checkbox" checked=false)
+        input( type="checkbox" checked=true.toString())
+        
+        br
+        br
+        br
+        
+        - var classes = ['foo','btn','btn-log']
+        button(class=classes class=['bingo']) Bingo
+        
+        br
+        
+        - var currentUrl = '/about'
+        a(class={active:currentUrl ==='/'} href="/") Home
+        a(class={active:currentUrl ==='/about'} href="/about") About
+        
+        #home Lotters
+        
+        br
+        br
+        br
+        
+        - var attributes = {};
+        - attributes.class = 'baz';
+        
+        #block(data-json=`{
+            id:123@h
+        }`)&attributes(attributes)
+        
+        
+        
+        
+        

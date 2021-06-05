@@ -2,8 +2,8 @@ const express = require('express');
 
 const Router = express.Router();
 
-Router.get('/home',(req,res)=>{
-    res.render('home');
+Router.get('/attributes',(req,res)=>{
+    res.render('attributes');
 });
 
 module.exports = Router;
