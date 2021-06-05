@@ -264,5 +264,48 @@ Pug’s first-class conditional syntax allows for optional parentheses. Pug also
 
 ```
 
+## Includes
+
+Includes allow you to insert the contents of one Pug file into another.
+
+```pug
+//- index.pug
+doctype html
+html
+  include includes/head.pug
+  body
+    h1 My Site
+    p Welcome to my super lame site.
+    include includes/foot.pug
+
+```
+If no file extension is given, .pug is automatically appended to the file name.
+
+## Including Plain Text
+
+Including non-Pug files simply includes their raw text.
+
+```pug
+//- index.pug
+doctype html
+html
+  head
+    style
+      include style.css
+  body
+    h1 My Site
+    p Welcome to my super lame site.
+    script
+      include script.js
+
+```
+
+
+
+
+
+
+
+
 
 

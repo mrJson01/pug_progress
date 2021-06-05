@@ -16,7 +16,11 @@ Router.get('/code',(req,res)=>{
 
 Router.get('/conditionals',(req,res)=>{
     res.render('conditionals');
-})
+});
+
+Router.get('/includes',(req,res)=>{
+    res.render('includes');
+});
 
 
 module.exports = Router;
