@@ -1,0 +1,26 @@
+{
+  "name": "pug_progress",
+  "version": "1.0.0",
+  "description": "## Attributes",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrJson01/pug_progress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrJson01/pug_progress/issues"
+  },
+  "homepage": "https://github.com/mrJson01/pug_progress#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
+  }
+}
