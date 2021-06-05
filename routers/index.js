@@ -12,6 +12,11 @@ Router.get('/case',(req,res)=>{
 
 Router.get('/code',(req,res)=>{
     res.render('code');
+});
+
+Router.get('/conditionals',(req,res)=>{
+    res.render('conditionals');
 })
+
 
 module.exports = Router;

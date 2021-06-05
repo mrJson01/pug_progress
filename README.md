@@ -245,8 +245,24 @@ p!= 'This code is' + ' <strong>not</strong> escaped!'
 
 ```
 
+## Conditionals
+
+Pug’s first-class conditional syntax allows for optional parentheses. Pug also provides the conditional **unless** , which works like a negated **if** .
 
 
+```pug
+
+- var user = {description:'foo bar baz'}
+- var authorised = false
+        
+        #user
+        if user.description
+            h2.green Description
+            p.description= user.description
+        else if authorised
+            p.description User has no description
+
+```
 
 
 
