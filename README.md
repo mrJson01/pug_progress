@@ -1,5 +1,9 @@
 # Pug Docs
 
+* https://github.com/mrJson01/pug_progress#attributes - attributes
+* https://github.com/mrJson01/pug_progress#multiline-attributes - multiline attributes
+* #quoted-attributes - quoted attributes
+
 ## Attributes
 
 Tag attributes look similar to HTML (with optional commas), but their values are just regular JavaScript. 
