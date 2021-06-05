@@ -1,8 +1,44 @@
 # Pug Docs
 
 * [attributes](https://github.com/mrJson01/pug_progress#attributes)
-
+* [multiline attributes](#multiline-attributes)
 * [quoted attributes](#quoted-attributes)
+* [attribute interpolation](#attribute-interpolation)
+* [unescaped attributes](#unescaped-attributes)
+* [boolean attributes](#boolean-attributes)
+* [style attributes](#style-attributes)
+* [class attributes](#class-attributes)
+* [class literal](#class-literal)
+* [id literal](#id-literal)
+* [&attributes](#attributes-1)
+* [case](#case)
+* [case fall through](#case-fall-through)
+* [block expansion](#block-expansion)
+* [code](#code)
+* [unbuffered code](#unbuffered-code)
+* [buffered code](#buffered-code)
+* [unescaped buffered code](#unescaped-buffered-code)
+* [conditionals](#conditionals)
+* [includes](#includes)
+* [including plain text](#including-plain-text)
+* [string interpolation, escaped](#string-interpolation-escaped)
+* [string interpolation, unescaped](#string-interpolation-unescaped)
+* [whitespace control](#whitespace-control)
+* [iteration](#iteration)
+* [each](#each)
+* [while](#while)
+* [mixins](#mixins)
+* [mixin attributes](#mixin attributes)
+* [default argument's values](#default-arguments-values)
+* [rest arguments](#rest-arguments)
+* [plain text](#plain-text)
+* [inline in a tag](#inline-in-a-tag)
+* [literal-html](#literal-html)
+* [piped text](#piped text)
+* [block in a tag](#block-in-a-tag)
+* [block expansion](#block expansion)
+* [self-closing tags](#self-closing-tags)
+* [rendered whitespace](#rendered-whitespace)
 
 ## Attributes
 
@@ -558,8 +594,7 @@ p
 ```
 ## Block in a Tag
 
-Often you might want large blocks of text within a tag. A good example is writing JavaScript <br/>
-and CSS code in the script and style tags. To do this, just add a **.** after the tag name.
+Often you might want large blocks of text within a tag. A good example is writing JavaScript and CSS code in the script and style tags. To do this, just add a **.** after the tag name.
 
 ## Block Expansion
 
@@ -568,8 +603,7 @@ a: img
 ```
 ## Self-Closing Tags
 
-Tags such as img, meta, and link are automatically self-closing.You can also explicitly <br/>
-self close a tag by appending the **/** character. 
+Tags such as img, meta, and link are automatically self-closing.You can also explicitly self close a tag by appending the **/** character. 
 
 ```pug
 
@@ -579,7 +613,6 @@ foo(class='baz')/
 ```
 ## Rendered Whitespace
 
-Whitespace is removed from the beginning and end of tags, so that you have control over <br/>
-whether the rendered HTML elements touch or not. 
+Whitespace is removed from the beginning and end of tags, so that you have control over whether the rendered HTML elements touch or not. 
 
 
